@@ -1,10 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'organization/base.html' %}
+{% load static %}
+{% block content %}
 
-</body>
-</html>
+
+<div class="d-flex justify-content-center">
+	<div class="col-md-4">
+		<div class="card card-body">
+
+
+			<p>Вы действительно хотите удалить "{{ organization }}"?</p>
+
+			<form action="{% url 'del_org' organization.id  %}" method="POST">
+
+				{% csrf_token %}
+				<a class="btn btn-dark" href="{% url 'orgs' %}">Cancel</a>
+
+				<input class="btn btn-dark" type="submit" name="Confirm">
+			</form>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
