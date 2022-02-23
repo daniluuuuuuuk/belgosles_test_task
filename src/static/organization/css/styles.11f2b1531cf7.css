@@ -1,0 +1,15 @@
+.container {
+  padding: 2rem 0rem;
+}
+
+h4 {
+  margin: 2rem 0rem 1rem;
+}
+
+.form-group {
+  display: inline-block;
+}
+
+th {
+  background-color: #ffcd39;
+}
