@@ -13,7 +13,7 @@ class Organization(models.Model):
         ordering = ['name']
 
     def __str__(self):
-        return {self.name}
+        return self.name
 
     def get_absolute_url(self):
         return reverse('organization', kwargs={'org_id': self.id})
