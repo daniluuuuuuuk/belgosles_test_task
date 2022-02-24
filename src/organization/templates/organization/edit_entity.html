@@ -1,13 +1,14 @@
 {% extends 'organization/base.html' %}
+{% load crispy_forms_tags %}
 {% load static %}
 {% block content %}
 
 <div class="row">
     <div class="col-md-6">
-        <div class="card card-body">
+        <div class="card card-body" style="float: right">
             <form action="" method="post">
                 {% csrf_token %}
-                {{form}}
+                {{form|crispy}}
                 <input type="submit" name="Submit">
 
             </form>
