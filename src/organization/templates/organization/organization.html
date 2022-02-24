@@ -29,9 +29,9 @@
               <th class="center" scope="row">{{org.id}}</th>
               <td>{{org.name}}</td>
               <td>
-                <button class="btn btn-dark"><a style="text-decoration: none" href="{% url 'del_org' org.id %}">Удалить</a></button>
-                <button class="btn btn-light"><a style="text-decoration: none" href="{% url 'create_org' %}"> Добавить</a></button>
-                <button class="btn btn-dark"><a style="text-decoration: none" href="{% url 'update_org' org.id %}">Изменить</a></button>
+                <button class="btn btn-dark"><a style="text-decoration: none; color: #ffc107" href="{% url 'del_org' org.id %}">Удалить</a></button>
+                <button class="btn btn-light"><a style="text-decoration: none; color: #ffc107" href="{% url 'create_org' %}"> Добавить</a></button>
+                <button class="btn btn-dark"><a style="text-decoration: none; color: #ffc107" href="{% url 'update_org' org.id %}">Изменить</a></button>
               </td>
             </tr>
           {% endfor %}
